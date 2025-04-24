@@ -24,13 +24,9 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.14.0</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.14.0</version>
 					<configuration>
-						<release>17</release> <!-- or your current Java version -->
+						<source>17</source>
+						<target>17</target>
 						<fork>true</fork>
 						<compilerArgs>
 							<arg>--add-exports</arg>
@@ -38,7 +34,6 @@
 								jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
 						</compilerArgs>
 					</configuration>
-
 				</plugin>
 
 			</plugins>
