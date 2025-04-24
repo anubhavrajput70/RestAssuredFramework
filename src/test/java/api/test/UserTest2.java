@@ -9,14 +9,16 @@ import org.testng.annotations.Test;
 import com.github.javafaker.Faker;
 
 import api.endpoints.UserEndpoints;
+import api.endpoints.UserEndpoints2;
 import api.payload.UserPojo;
 import io.restassured.response.Response;
 
-public class UserTest {
+//this test is with properties file
+public class UserTest2 {
 
 	Faker faker;
 	UserPojo userPayload;
-	
+
 	public Logger logger;
 
 	// for creating userdata
@@ -32,8 +34,8 @@ public class UserTest {
 		userPayload.setEmail(faker.internet().safeEmailAddress());
 		userPayload.setPassword(faker.internet().password());
 		userPayload.setPhone(faker.phoneNumber().cellPhone());
-		
-		//log
+
+		// log
 		logger = LogManager.getLogger(this.getClass());
 
 	}
@@ -41,8 +43,8 @@ public class UserTest {
 	@Test(priority = 1)
 	public void testPostUser() {
 		logger.info("*******************Creting user************************");
-		
-		Response response = UserEndpoints.createUser(userPayload);
+
+		Response response = UserEndpoints2.createUser(userPayload);
 
 		response.then().log().all();
 
@@ -53,7 +55,7 @@ public class UserTest {
 	@Test(priority = 2)
 	public void testGetUser() {
 		logger.info("*******************Reading user info************************");
-		Response response = UserEndpoints.readUser(this.userPayload.getUsername());
+		Response response = UserEndpoints2.readUser(this.userPayload.getUsername());
 		response.then().log().all();
 		Assert.assertEquals(response.getStatusCode(), 200);
 		logger.info("*******************user info displayed************************");
@@ -67,12 +69,12 @@ public class UserTest {
 		userPayload.setLastname(faker.name().lastName());
 		userPayload.setEmail(faker.internet().safeEmailAddress());
 
-		Response response = UserEndpoints.updateUser(this.userPayload.getUsername(), userPayload);
+		Response response = UserEndpoints2.updateUser(this.userPayload.getUsername(), userPayload);
 		response.then().log().body().statusCode(200);
 		Assert.assertEquals(response.getStatusCode(), 200);
 
 		// checking data after udpate
-		Response responseAfterUpdate = UserEndpoints.readUser(this.userPayload.getUsername());
+		Response responseAfterUpdate = UserEndpoints2.readUser(this.userPayload.getUsername());
 		Assert.assertEquals(responseAfterUpdate.getStatusCode(), 200);
 		logger.info("*******************user updated************************");
 

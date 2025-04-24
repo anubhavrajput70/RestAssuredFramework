@@ -1,4 +1,4 @@
-package api.utilites;
+package api.utilities;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -15,12 +15,11 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-
 public class ExtentReportsUtility implements ITestListener {
 
-	public ExtentSparkReporter sparkReporter;
-	public ExtentReports extent;
-	public ExtentTest test;
+	public ExtentSparkReporter sparkReporter; //for ui
+	public ExtentReports extent;// for common details like env info, name 
+	public ExtentTest test; //creating entry in the report
 
 	String repName;
 
@@ -33,9 +32,9 @@ public class ExtentReportsUtility implements ITestListener {
 		sparkReporter.config().setTheme(Theme.DARK);
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
-		extent.setSystemInfo("Application", "HeroKuapp");
+		extent.setSystemInfo("Application", "PetStorSwagger");
 		extent.setSystemInfo("Module", "Admin");
-		extent.setSystemInfo("Sub Module", "Customer");
+		extent.setSystemInfo("Sub Module", "PetStore");
 		extent.setSystemInfo("User", System.getProperty("user.name"));
 		extent.setSystemInfo("Environment", "QA");
 	}

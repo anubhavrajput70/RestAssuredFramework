@@ -1,4 +1,4 @@
-package api.utilites;
+package api.utilities;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ public class DataProviders {
 
 	@DataProvider(name = "Data")
 	public String[][] getAllData() throws IOException {
-		String path = ".\\testData\\UserData.xlsx";
+		String path = System.getProperty("user.dir")+"//testData//UserData.xlsx";
 		ExcelUtility xlUtil = new ExcelUtility(path);
 
 		int totalRowCount = xlUtil.getRowCount("Sheet1");
