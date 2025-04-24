@@ -30,6 +30,7 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.14.0</version>
 					<configuration>
+						<release>17</release> <!-- or your current Java version -->
 						<fork>true</fork>
 						<compilerArgs>
 							<arg>--add-exports</arg>
@@ -37,6 +38,7 @@
 								jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
 						</compilerArgs>
 					</configuration>
+
 				</plugin>
 
 			</plugins>
