@@ -12,3 +12,28 @@
 01:20:51.603 [main] INFO  api.test.UserTest - *******************user updated************************
 01:20:51.605 [main] INFO  api.test.UserTest - *******************deleting user************************
 01:20:52.783 [main] INFO  api.test.UserTest - *******************user deleted************************
+01:34:59.341 [main] INFO  api.test.UserTest - *******************Creting user************************
+01:35:03.362 [main] INFO  api.test.UserTest - *******************user Created************************
+01:35:03.392 [main] INFO  api.test.UserTest - *******************Reading user info************************
+01:35:04.666 [main] INFO  api.test.UserTest - *******************updating user info************************
+01:35:07.154 [main] INFO  api.test.UserTest - *******************user updated************************
+01:35:07.158 [main] INFO  api.test.UserTest - *******************deleting user************************
+01:35:08.293 [main] INFO  api.test.UserTest - *******************user deleted************************
+01:36:53.505 [main] DEBUG org.testng.TestNG - suiteXmlPath: "C:\Users\anubh\OneDrive\Desktop\Eclipse workspace\RestAssuredFramework\testng.xml"
+01:36:53.833 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\anubh\OneDrive\Desktop\Eclipse workspace\RestAssuredFramework\testng.xml
+
+01:36:54.325 [main] INFO  api.test.UserTest - *******************Creting user************************
+01:36:57.596 [main] INFO  api.test.UserTest - *******************user Created************************
+01:36:57.613 [main] INFO  api.test.UserTest - *******************Reading user info************************
+01:36:58.879 [main] INFO  api.test.UserTest - *******************updating user info************************
+01:37:01.671 [main] INFO  api.test.UserTest - *******************user updated************************
+01:37:01.678 [main] INFO  api.test.UserTest - *******************deleting user************************
+01:37:03.084 [main] INFO  api.test.UserTest - *******************user deleted************************
+02:17:05.083 [main] DEBUG org.testng.TestNG - suiteXmlPath: "C:\Users\anubh\OneDrive\Desktop\Eclipse workspace\RestAssuredFramework\testng.xml"
+02:17:05.922 [main] INFO  api.test.UserTest - *******************Creting user************************
+02:17:09.226 [main] INFO  api.test.UserTest - *******************user Created************************
+02:17:09.254 [main] INFO  api.test.UserTest - *******************Reading user info************************
+02:17:10.580 [main] INFO  api.test.UserTest - *******************user info displayed************************
+02:17:10.584 [main] INFO  api.test.UserTest - *******************updating user info************************
+02:17:13.356 [main] INFO  api.test.UserTest - *******************deleting user************************

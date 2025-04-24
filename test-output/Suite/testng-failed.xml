@@ -10,7 +10,6 @@
         <methods>
           <include name="setup"/>
           <include name="testGetUser"/>
-          <include name="testUpdateByName"/>
         </methods>
       </class> <!-- api.test.UserTest -->
     </classes>
